@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Akurasi
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Akurasi\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Akurasi()
+comment2.params=akurasi
+comment2.target=void\ addAkurasi(int)
+comment3.params=akurasi
+comment3.target=void\ setAkurasi(int)
+comment4.params=
+comment4.target=int\ getAkurasi()
+comment5.params=
+comment5.target=void\ act()
+numComments=6

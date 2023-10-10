@@ -22,7 +22,7 @@ public class Enemies extends Karakter
     
     public void act()
     {
-        this.move(6);
+        this.move(4);
         World wrld = this.getWorld();
         
         List<Player> pls = this.getNeighbours(300, true, Player.class);
@@ -32,13 +32,17 @@ public class Enemies extends Karakter
         
         if(this.isTouching(Bullet.class)){
             ScoreBoard scoreBoard = wrld.getObjects(ScoreBoard.class).get(0);
-            scoreBoard.addScore(1);
+            scoreBoard.addScore(10);
+            Akurasi akurasi = wrld.getObjects(Akurasi.class).get(0);
+            akurasi.addAkurasi(10);
             this.removeTouching(Bullet.class);
             wrld.removeObject(this);
             return;
         }
         
         if(this.getY() == wrld.getHeight()-1){
+            Akurasi akurasi = wrld.getObjects(Akurasi.class).get(0);
+            akurasi.addAkurasi(-10);
             wrld.removeObject(this);
             return;
         }

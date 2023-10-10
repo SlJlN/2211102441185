@@ -10,19 +10,24 @@ import java.util.*;
  */
 public class MyWorld extends World
 {
-
+    Akurasi akurasi;
     ScoreBoard scoreBoard;
     public ScoreBoard getScoreBoard(){
         return this.scoreBoard;
+    }
+    public Akurasi getAkurasi(){
+        return this.akurasi;
     }
     
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 600, 1);
+        super(620, 620, 1);
         spawnPlayer();
         this.scoreBoard = new ScoreBoard();
-        this.addObject(scoreBoard, 60, 30);
+        this.addObject(scoreBoard, 60, 18);
+        this.akurasi = new Akurasi();
+        this.addObject(akurasi, 87, 54);
     }
 
     private void spawnPlayer(){
